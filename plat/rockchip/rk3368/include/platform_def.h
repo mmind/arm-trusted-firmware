@@ -67,9 +67,9 @@
 /*******************************************************************************
  * Platform memory map related constants
  ******************************************************************************/
-/* TF txet, ro, rw, Size: 512KB */
+/* TF txet, ro, rw, Size: 2MB */
 #define TZRAM_BASE		(0x0)
-#define TZRAM_SIZE		(0x80000)
+#define TZRAM_SIZE		(0x200000)
 
 /*******************************************************************************
  * BL31 specific defines.
@@ -77,8 +77,8 @@
 /*
  * Put BL3-1 at the top of the Trusted RAM
  */
-#define BL31_BASE		(TZRAM_BASE + 0x10000)
-#define BL31_LIMIT	(TZRAM_BASE + TZRAM_SIZE)
+#define BL31_BASE		(TZRAM_BASE + 0x100000)
+#define BL31_LIMIT		(TZRAM_BASE + TZRAM_SIZE)
 
 /*******************************************************************************
  * Platform specific page table and MMU setup constants
