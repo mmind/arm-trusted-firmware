@@ -22,8 +22,8 @@ void sp_min_plat_runtime_setup(void)
 	 * from SP_MIN will be suppressed.
 	 */
 #if MULTI_CONSOLE_API
-	console_switch_state(CONSOLE_FLAG_RUNTIME);
+//	console_switch_state(CONSOLE_FLAG_RUNTIME);
 #else
-	console_uninit();
+//	console_uninit();
 #endif
 }
