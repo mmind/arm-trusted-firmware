@@ -51,7 +51,7 @@
 #define DDR_PHY_SIZE		0x10000
 
 #define SERVICE_BUS_BASE	0xffac0000
-#define SERVICE_BUS_SISE	0x50000
+#define SERVICE_BUS_SIZE	0x50000
 
 #define COLD_BOOT_BASE		0xffff0000
 /**************************************************************************

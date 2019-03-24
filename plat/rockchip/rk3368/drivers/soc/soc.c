@@ -40,7 +40,7 @@ const mmap_region_t plat_rk_mmap[] = {
 			MT_DEVICE | MT_RW | MT_SECURE),
 	MAP_REGION_FLAT(GRF_BASE, GRF_SIZE,
 			MT_DEVICE | MT_RW | MT_SECURE),
-	MAP_REGION_FLAT(SERVICE_BUS_BASE, SERVICE_BUS_SISE,
+	MAP_REGION_FLAT(SERVICE_BUS_BASE, SERVICE_BUS_SIZE,
 			MT_DEVICE | MT_RW | MT_SECURE),
 	{ 0 }
 };
@@ -73,7 +73,7 @@ void sgrf_init(void)
 	mmio_write_32(SGRF_BASE + SGRF_SOC_CON(6), SGRF_SOC_CON7_BITS);
 	mmio_write_32(SGRF_BASE + SGRF_SOC_CON(7), SGRF_SOC_CON_NS);
 
-	/* secure dma to no sesure */
+	/* secure dma to no secure */
 	mmio_write_32(SGRF_BASE + SGRF_BUSDMAC_CON(0), SGRF_BUSDMAC_CON0_NS);
 	mmio_write_32(SGRF_BASE + SGRF_BUSDMAC_CON(1), SGRF_BUSDMAC_CON1_NS);
 	dsb();
