@@ -55,6 +55,9 @@ include lib/libfdt/libfdt.mk
 
 $(eval $(call add_define,PLAT_EXTRA_LD_SCRIPT))
 
+# Enable workarounds for selected Cortex-A53 erratas.
+ERRATA_A53_855873	:=	1
+
 # Do not enable SVE
 ENABLE_SVE_FOR_NS	:=	0
 
